@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# PhotoFolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PhotoFolio is an online photo album React app that allows users to upload, organize, and share their digital photos.
 
-## Available Scripts
+## Goal
 
-In the project directory, you can run:
+Develop an Online Photo Album (PhotoFolio) that allows users to upload, organize, and share their digital photos.
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A live demo of PhotoFolio is available [here](#).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Functionalities
 
-### `npm test`
+- **Maintain Images by Category**: Users can organize images by category in various albums.
+- **Save, Preview, and Download Images**: Users have options to save, preview, and download images.
+- **User-Friendly Design**: The application features a visually appealing design that encourages users to explore and use the platform regularly.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
 
-### `npm run build`
+- React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get started with PhotoFolio, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   
+    ```bash
+    git clone https://github.com/your-username/photofolio.git
+    ```
 
-### `npm run eject`
+2. Install dependencies:
+   
+    ```bash
+    cd photofolio
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Set up Firestore:
+   
+    - Create and initialize a new Firestore for the PhotoFolio app.
+    - Include Firestore configuration inside the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Run the development server:
+   
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Albums List Component**: Displays a list of albums. Retrieves all albums from the database and saves them in the state.
+   
+2. **AlbumForm Component**: Adds a new album to the database. Features a form heading, an input field for the album name, and clear and submit buttons.
 
-## Learn More
+3. **Images List Component**: Displays all images inside an album. Retrieves all images in the selected album from the database and saves them in the state. Conditionally renders if an album is selected.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **ImageForm Component**: Adds or updates images in the database. Features a form heading, input fields for the image title and image URL, and clear submit buttons.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Carousel Component**: Shows images inside the selected album in a modal window with next, previous, and close buttons. Rendered conditionally.
 
-### Code Splitting
+## Additional Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Search Input Field**: Filters images inside the Images List component locally.
+- **Back Button**: Renders the Albums List component from the Images List component.
+- **Dynamic Classes**: Buttons render with different styles.
+- **Prefill ImageForm**: Prefills image data when the edit button is clicked.
+- **Conditional Rendering**: Shows absence of data and loading state using the react-spinner-material library.
+- **Toast Messages**: Shows toast messages for async actions and error conditions using the react-toastify library.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions are welcome! Please feel free to submit a pull request with your enhancements.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
